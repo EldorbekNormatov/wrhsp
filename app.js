@@ -8,10 +8,6 @@ const express = require("express")
 const app = express()
 app.use(express.json())
 
-app.get("/", async (req, res) => {
-    const read  = await FruitStock.read() 
-    res.status(201).json(read)
-})
 
 app.post("/", async (req, res) => {
     const {name, count} = req.body
